@@ -10,9 +10,12 @@ int snowFallI= 1;
 int snowFallJ= 1;
 int snowFallK= 1;
 int snowFallL= 1;
+PImage treeS;
 void setup()
 {
   size(500,500);
+  frameRate(60);
+  treeS= loadImage("tree.jpg");
 }
 void draw()
 {
@@ -21,6 +24,8 @@ void draw()
   head();
   body();
   snow();
+  image(treeS , 100, 100, width,  height);
+
 }
 void head ()
 {
