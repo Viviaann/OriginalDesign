@@ -11,41 +11,48 @@ int snowFallJ= 1;
 int snowFallK= 1;
 int snowFallL= 1;
 PImage treeS;
+PImage backTree;
 void setup()
 {
   size(500,500);
   frameRate(60);
-  treeS= loadImage("tree.jpg");
+  treeS= loadImage("wintertree.png");
+  backTree = loadImage("backgroundtree.jpg");
 }
 void draw()
 {
 
-  background(128,128,128);
+  image(backTree,0,0, width, height);
+  image(treeS , 70, 30, width,  height);
+   image(treeS , -100, 30, width,  height);
   head();
   body();
   snow();
-  image(treeS , 100, 100, width,  height);
+  image(treeS , -180, 80, width,  height);
+  image(treeS , 150, 80, width,  height);
+
+
 
 }
 void head ()
 {
 	stroke(250, 250, 250);
 	fill(255,255,255);
-	ellipse(250,200,80,80);//head
+	ellipse(250,230,80,80);//head
 	fill(0,0,0);
-	ellipse(230,200,10,10);//eyes
-	ellipse(270,200,10,10);
-	fill(250,100,0);//hat
-	rect(210,150,80,20);
+	ellipse(230,230,10,10);//eyes
+	ellipse(270,230,10,10);
+	fill(98,64,64);//hat
+	rect(210,180,80,20);
 	fill(255,255,100);
-	triangle(210,150,290,150,250,130);
+	triangle(210,180,290,180,250,130);
 
 }
 void body()
 {
 	stroke(250);
 	fill(255,255,255);
-	ellipse(250,310,150,150);
+	ellipse(250,340,150,150);
 }
 void snow() 
 {
